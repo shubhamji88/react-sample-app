@@ -79,7 +79,7 @@ nano .env
 4. Run the application
 
 ```sh
-npm start
+npm run start:all
 ```
 
 <!-- USAGE EXAMPLES -->

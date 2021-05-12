@@ -17,49 +17,46 @@ export const MainScreenComponent: React.FC<{}> = () => {
 
   let history = useHistory();
 
-  const handleCreateRoomClick = useCallback((title) => {
-    axios({
-      url: `${process.env.REACT_APP_BASE_URL}/v1/organizations/${process.env.REACT_APP_ORG_ID}/meeting`,
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        Authorization: `APIKEY ${process.env.REACT_APP_API_KEY}`,
-      },
-      data: {
-        title: title,
-      },
-    })
-      .then((res) => {
-        let rooms = allMeeetings;
-        rooms.push(res.data.data.meeting);
-        setAllMeeting([...rooms]);
-        setNewMeetingTitle("");
+  const handleCreateRoomClick = useCallback(
+    (title) => {
+      axios({
+        url: `http://localhost:4000/meeting`,
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          Authorization: `APIKEY ${process.env.REACT_APP_API_KEY}`,
+        },
+        data: {
+          title: title,
+        },
       })
-      .catch((err) => console.error(err));
-  }, []);
+        .then((res) => {
+          let rooms = [...allMeeetings];
+          rooms.push(res.data.data.meeting);
+          setAllMeeting([...rooms]);
+          setNewMeetingTitle("");
+        })
+        .catch((err) => console.error(err));
+    },
+    [allMeeetings]
+  );
 
   const joinExistingRoom = async (
     meetingId: string,
     roomName: string,
     isHost: boolean = false
   ) => {
-    const resp = await axios.post(
-      `${process.env.REACT_APP_BASE_URL}/v1/organizations/${process.env.REACT_APP_ORG_ID}/meetings/${meetingId}/participant`,
-      {
-        clientSpecificId: Math.random().toString(36).substring(7),
-        userDetails: {
-          name: isHost
-            ? "Host"
-            : "Participant" + Math.random().toString(36).substring(2),
-        },
-        roleName: isHost ? "host" : undefined,
+    const resp = await axios({
+      url: `http://localhost:4000/participant`,
+      method: "POST",
+      headers: {
+        Authorization: `APIKEY ${process.env.REACT_APP_API_KEY}`,
       },
-      {
-        headers: {
-          Authorization: `APIKEY ${process.env.REACT_APP_API_KEY}`,
-        },
-      }
-    );
+      data: {
+        isHost: isHost,
+        meetingId: meetingId,
+      },
+    });
 
     const authResponse = resp.data.data.authResponse;
     const authToken = authResponse.authToken;
@@ -76,12 +73,8 @@ export const MainScreenComponent: React.FC<{}> = () => {
   useEffect(() => {
     // api call to get list of available/existing meeting rooms
     axios({
-      url: `${process.env.REACT_APP_BASE_URL}/v1/organizations/${process.env.REACT_APP_ORG_ID}/meetings`,
+      url: `http://localhost:4000/meeting`,
       method: "GET",
-      headers: {
-        Accept: "application/json",
-        Authorization: `APIKEY ${process.env.REACT_APP_API_KEY}`,
-      },
     })
       .then((response) => {
         setAllMeeting(response.data.data.meetings);
