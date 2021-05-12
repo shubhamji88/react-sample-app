@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { MainScreenComponent } from "./container/mainScreen";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MeetingComponent } from "./exampleComponent/simpleDyteMeetingComponent";
+import { MeetingComponent } from "./exampleComponent/simpleDyteClient";
 import { CustumLayoutButton } from "./exampleComponent/custumLayoutButton";
 
 function App() {

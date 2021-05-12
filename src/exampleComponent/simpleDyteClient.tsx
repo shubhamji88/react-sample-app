@@ -1,14 +1,14 @@
 import React from "react";
 import { DyteMeeting, Meeting } from "dyte-client";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export const MeetingComponent: React.FC<{}> = () => {
-  // let slug: any = useParams();
   let history = useHistory();
   let auth = sessionStorage.getItem("auth");
   let roomName = sessionStorage.getItem("roomName");
 
   const onDyteInit = (meeting: Meeting) => {
+    //meeting ended event
     meeting.on(meeting.Events.meetingEnded, () => {
       sessionStorage.clear();
       history.push("/");

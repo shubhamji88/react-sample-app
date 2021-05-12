@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import LoaderIcon from "../loader";
 
-// enum ExampleComponent {
-//   "simple-dyte-client" = "simpleDyteMeetingComponent",
-//   "custum-layout-button" = "custumLayoutButton",
-// }
+const folderNameMap: any = {
+  "simple-dyte-client": "simpleDyteMeeting",
+  "custum-layout-button": "custumLayoutButton",
+};
 
 export const MainScreenComponent: React.FC<{}> = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -73,6 +74,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
   };
 
   useEffect(() => {
+    // api call to get list of available/existing meeting rooms
     axios({
       url: `${process.env.REACT_APP_BASE_URL}/v1/organizations/${process.env.REACT_APP_ORG_ID}/meetings`,
       method: "GET",
@@ -115,7 +117,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
       <div className="ex-det">
         <div>Check the example component here</div>
         <br />
-        <code>/src/exampleComponent/{selectedExample}</code>
+        <code>/src/exampleComponent/{folderNameMap[selectedExample]}</code>
       </div>
       <div className="divider" />
       <div className="existing-meeting-wrapper flex column ">
@@ -150,6 +152,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
             <div>Create a new room above</div>
           </div>
         )}
+        {loading && <LoaderIcon />}
       </div>
     </div>
   );

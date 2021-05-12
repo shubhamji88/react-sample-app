@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { DyteMeeting, Meeting } from "dyte-client";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export const CustumLayoutButton: React.FC<{}> = () => {
   let history = useHistory();
@@ -8,17 +8,19 @@ export const CustumLayoutButton: React.FC<{}> = () => {
   let roomName = sessionStorage.getItem("roomName");
 
   const onDyteInit = (meeting: Meeting): void => {
+    //meeting joined event
     meeting.on(meeting.Events.meetingJoined, () => {
       meeting.controlBar.addButton({
         icon: <div>😀</div>,
         label: "React 😀",
         position: "center",
         onClick: () => {
-          meeting.sendRoomMessage("DKAJSDKJ");
+          alert("Reaction Click");
         },
       });
     });
 
+    //meeting ended event
     meeting.on(meeting.Events.meetingEnded, () => {
       sessionStorage.clear();
       history.push("/");
