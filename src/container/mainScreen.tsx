@@ -24,7 +24,6 @@ export const MainScreenComponent: React.FC<{}> = () => {
         method: "POST",
         headers: {
           Accept: "application/json",
-          Authorization: `APIKEY ${process.env.REACT_APP_API_KEY}`,
         },
         data: {
           title: title,
@@ -50,7 +49,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
       url: `http://localhost:4000/participant`,
       method: "POST",
       headers: {
-        Authorization: `APIKEY ${process.env.REACT_APP_API_KEY}`,
+        Accept: "application/json",
       },
       data: {
         isHost: isHost,

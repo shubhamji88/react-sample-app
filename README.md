@@ -26,9 +26,12 @@
 
 - [About the Project](#about-the-project)
   - [Built With](#built-with)
+- [Structure](#structure)
+- [Application FLow](#application-flow)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
 - [Usage](#usage)
+
 - [License](#license)
 
 <!-- ABOUT THE PROJECT -->
@@ -50,6 +53,32 @@ Choose from a list of available meeting rooms or create a new dyte meeting and j
 - [Axios](https://github.com/axios/axios)
 
 <!-- GETTING STARTED -->
+
+## Structure
+
+React application structure :
+
+```
+├── src
+│   ├── exampleComponent // sample example components
+│   ├── container // contains main screen page component.
+│   ├── app.tsx // page routes are defined here
+│   ├── index.tsx // application js entry point
+├── server.js // express server for handling api requests
+
+```
+
+## Application Flow
+
+The client application will run on `http://localhost:3000` and the express server will run on `http://localhost:4000`. All api request from client end will be handled by the express server.
+
+On opening `http://localhost:3000` on browser. The client will first make an api call to check list of available meeting rooms. If not, then you can create a meeting room by entering a title and then click on create room button. The newly created room can be seen under the meeting room list section.
+
+You can select the example that you want to test from the select example section. You can also refer the example component code with the path provided.
+
+Finally, you can test the example by joining any meeting room as a host or as a participant. On clicking the button, a new user will be created by making an api call and meeting room will be launched.
+
+All mandatory credentials of a user (i.e roomname , user authtoken etc ) that are required to launch the meetings are stored in session storage.
 
 ## Getting Started
 
@@ -79,7 +108,7 @@ nano .env
 4. Run the application
 
 ```sh
-npm run start:all
+npm run start:dev
 ```
 
 <!-- USAGE EXAMPLES -->
