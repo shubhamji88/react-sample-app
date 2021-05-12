@@ -12,7 +12,7 @@
     <a href="https://docs.dyte.in"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://dyte-web-example.herokuapp.com/">View Demo</a>
+    <!-- <a href="https://dyte-web-example.herokuapp.com/">View Demo</a> -->
     ·
     <a href="https://github.com/dyte-in/web-integration-example/issues">Report Bug</a>
     ·
@@ -86,7 +86,7 @@ npm start
 
 ## Usage
 
-Choose from a list of examples and then join on any meetign room to test it live.
+Choose from a list of examples and then join on any meeting room to test it live.
 
 You can also refer the example component code with the path provided.
 
