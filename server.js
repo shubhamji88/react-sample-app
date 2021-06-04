@@ -7,9 +7,9 @@ const port = 4000;
 app.use(express.json());
 app.use(cors());
 
-let baseUrl = process.env.REACT_APP_BASE_URL;
-let orgId = process.env.REACT_APP_ORG_ID;
-let key = process.env.REACT_APP_API_KEY;
+let baseUrl = process.env.REACT_APP_DYTE_BASE_URL;
+let orgId = process.env.REACT_APP_DYTE_ORG_ID;
+let key = process.env.REACT_APP_DYTE_API_KEY;
 
 //get all meetings
 app.get("/meeting", async (req, res) => {

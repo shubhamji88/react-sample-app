@@ -5,7 +5,7 @@ import LoaderIcon from "../loader";
 
 const folderNameMap: any = {
   "simple-dyte-client": "simpleDyteMeeting",
-  "custum-layout-button": "custumLayoutButton",
+  "custom-layout-button": "customLayoutButton",
 };
 
 export const MainScreenComponent: React.FC<{}> = () => {
@@ -104,7 +104,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
       <h3>Choose Example </h3>
       <select onChange={(e) => setSelectedExample(e.target.value)}>
         <option value="simple-dyte-client">simple-dyte-client</option>
-        <option value="custum-layout-button">custum-layout-button</option>
+        <option value="custom-layout-button">custom-layout-button</option>
       </select>
       <div className="ex-det">
         <div>Check the example component here</div>

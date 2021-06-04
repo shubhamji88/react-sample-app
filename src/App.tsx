@@ -3,7 +3,7 @@ import "./App.css";
 import { MainScreenComponent } from "./container/mainScreen";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { MeetingComponent } from "./exampleComponent/simpleDyteClient";
-import { CustumLayoutButton } from "./exampleComponent/custumLayoutButton";
+import { CustomLayoutButton } from "./exampleComponent/customLayoutButton";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
             component={MeetingComponent}
           />
           <Route
-            path="/custum-layout-button/meeting/:id"
-            component={CustumLayoutButton}
+            path="/custom-layout-button/meeting/:id"
+            component={CustomLayoutButton}
           />
         </Switch>
       </Router>

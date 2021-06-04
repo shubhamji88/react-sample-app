@@ -16,14 +16,14 @@ export const MeetingComponent: React.FC<{}> = () => {
   };
   return (
     <React.Fragment>
-      {auth && roomName && process.env.REACT_APP_ORG_ID && (
+      {auth && roomName && process.env.REACT_APP_DYTE_ORG_ID && (
         <DyteMeeting
           onInit={onDyteInit}
-          clientId={process.env.REACT_APP_ORG_ID}
+          clientId={process.env.REACT_APP_DYTE_ORG_ID}
           meetingConfig={{
             roomName: roomName,
             authToken: auth,
-            apiBase: process.env.REACT_APP_BASE_URL,
+            apiBase: process.env.REACT_APP_DYTE_BASE_URL,
           }}
         />
       )}

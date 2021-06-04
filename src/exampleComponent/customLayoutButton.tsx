@@ -2,7 +2,7 @@ import React from "react";
 import { DyteMeeting, Meeting } from "dyte-client";
 import { useHistory } from "react-router-dom";
 
-export const CustumLayoutButton: React.FC<{}> = () => {
+export const CustomLayoutButton: React.FC<{}> = () => {
   let history = useHistory();
   let auth = sessionStorage.getItem("auth");
   let roomName = sessionStorage.getItem("roomName");
@@ -29,14 +29,14 @@ export const CustumLayoutButton: React.FC<{}> = () => {
 
   return (
     <React.Fragment>
-      {auth && roomName && process.env.REACT_APP_ORG_ID && (
+      {auth && roomName && process.env.REACT_APP_DYTE_ORG_ID && (
         <DyteMeeting
           onInit={onDyteInit}
-          clientId={process.env.REACT_APP_ORG_ID}
+          clientId={process.env.REACT_APP_DYTE_ORG_ID}
           meetingConfig={{
             roomName: roomName,
             authToken: auth,
-            apiBase: process.env.REACT_APP_BASE_URL,
+            apiBase: process.env.REACT_APP_DYTE_BASE_URL,
             showSetupScreen: true,
           }}
         />
