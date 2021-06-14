@@ -12,10 +12,5 @@
         "REACT_APP_DYTE_BASE_URL": {
             "description": "Base URL for calling dyte APIs"    
         }
-    },
-    "buildpacks": [
-        {
-          "url": "https://github.com/mars/create-react-app-buildpack"
-        }
-      ]
+    }
   }
