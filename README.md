@@ -12,8 +12,8 @@
     <a href="https://docs.dyte.in"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <!-- <a href="https://dyte-web-example.herokuapp.com/">View Demo</a> -->
-    <!-- · -->
+    <a href="https://dyte-react-example.herokuapp.com">View Demo</a>
+    ·
     <a href="https://github.com/dyte-in/web-integration-example/issues">Report Bug</a>
     ·
     <a href="https://github.com/dyte-in/web-integration-example/issues">Request Feature</a>
@@ -65,13 +65,13 @@ React application structure :
 │   ├── container // contains main screen page component.
 │   ├── app.tsx // page routes are defined here
 │   ├── index.tsx // application js entry point
-├── server.js // express server for handling api requests
+├── server.js // express server for serving pages and handleing api requests.
 
 ```
 
 ## Application Flow
 
-The client application will run on `http://localhost:3000` and the express server will run on `http://localhost:4000`. All api request from client end will be handled by the express server.
+The application by default will run here `http://localhost:3000`. The express server will be used to serve the build pages and the api request.
 
 On opening `http://localhost:3000` on browser. The client will first make an api call to check list of available meeting rooms. If not, then you can create a meeting room by entering a title and then click on create room button. The newly created room can be seen under the meeting room list section.
 
