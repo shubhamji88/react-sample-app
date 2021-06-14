@@ -20,7 +20,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
   const handleCreateRoomClick = useCallback(
     (title) => {
       axios({
-        url: `${window.location.hostname}:4000/meeting`,
+        url: `https://${window.location.hostname}:4000/meeting`,
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -46,7 +46,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
     isHost: boolean = false
   ) => {
     const resp = await axios({
-      url: `${window.location.hostname}:4000/participant`,
+      url: `https://${window.location.hostname}:4000/participant`,
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -72,7 +72,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
   useEffect(() => {
     // api call to get list of available/existing meeting rooms
     axios({
-      url: `${window.location.hostname}:4000/meeting`,
+      url: `https://${window.location.hostname}:4000/meeting`,
       method: "GET",
     })
       .then((response) => {
