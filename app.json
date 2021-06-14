@@ -12,5 +12,10 @@
         "REACT_APP_DYTE_BASE_URL": {
             "description": "Base URL for calling dyte APIs"    
         }
-    }
+    },
+    "buildpacks": [
+        {
+          "url": "heroku/nodejs"
+        }
+      ]
   }
