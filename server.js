@@ -4,7 +4,7 @@ const axios = require("axios");
 const cors = require("cors");
 const path = require('path');
 const app = express();
-const port = process.env.port | 4000;
+const port = process.env.PORT | 4000;
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, '/build')));
