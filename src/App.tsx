@@ -12,11 +12,11 @@ function App() {
         <Switch>
           <Route path="/" exact component={MainScreenComponent} />
           <Route
-            path="/simple-dyte-client/meeting/:id"
+            path="/simple-dyte-client/meeting/:room/:id"
             component={MeetingComponent}
           />
           <Route
-            path="/custom-layout-button/meeting/:id"
+            path="/custom-layout-button/meeting/:room/:id"
             component={CustomLayoutButton}
           />
         </Switch>

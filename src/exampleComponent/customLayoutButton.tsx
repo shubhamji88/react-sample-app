@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { DyteMeeting, Meeting } from "dyte-client";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+import { joinExistingRoom } from "../utils";
 
 export const CustomLayoutButton: React.FC<{}> = () => {
   let history = useHistory();
+  let params : {
+    id :  string;
+    room : string
+  } = useParams()
   let auth = sessionStorage.getItem("auth");
   let roomName = sessionStorage.getItem("roomName");
 
@@ -26,6 +31,13 @@ export const CustomLayoutButton: React.FC<{}> = () => {
       history.push("/");
     });
   };
+
+  useEffect(() => {
+    if(!auth && !roomName){
+      //creating a new participant
+      joinExistingRoom(params.id, params.room)
+    }
+  }, [])
 
   return (
     <React.Fragment>

@@ -40,7 +40,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
     [allMeeetings]
   );
 
-  const joinExistingRoom = async (
+  const joinRoom = async (
     meetingId: string,
     roomName: string,
     isHost: boolean = false
@@ -66,7 +66,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
     sessionStorage.setItem("roomName", roomName);
 
     //redirecting to the example meeting page
-    history.push(`/${selectedExample}/meeting/${meetingId}`);
+    history.push(`/${selectedExample}/meeting/${roomName}/${meetingId}`);
   };
 
   useEffect(() => {
@@ -123,13 +123,13 @@ export const MainScreenComponent: React.FC<{}> = () => {
                   <li key={k}>{el.title}</li>
                   <div className="flex row">
                     <button
-                      onClick={() => joinExistingRoom(el.id, el.roomName, true)}
+                      onClick={() => joinRoom(el.id, el.roomName, true)}
                     >
                       Join as Host{" "}
                     </button>
                     <button
                       className="margin-left"
-                      onClick={() => joinExistingRoom(el.id, el.roomName)}
+                      onClick={() => joinRoom(el.id, el.roomName)}
                     >
                       Join as Participant{" "}
                     </button>
