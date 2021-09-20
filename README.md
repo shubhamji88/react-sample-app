@@ -12,7 +12,7 @@
     <a href="https://docs.dyte.in"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://dyte-react-example.herokuapp.com">View Demo</a>
+    <a href="https://dyte-react-demo.herokuapp.com">View Demo</a>
     ·
     <a href="https://github.com/dyte-in/web-integration-example/issues">Report Bug</a>
     ·
