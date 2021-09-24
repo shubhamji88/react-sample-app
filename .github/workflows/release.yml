@@ -28,7 +28,7 @@ jobs:
         run: |
           npm install dyte-client@latest
           git add package.json package-lock.json
-          git commit -m "fix: dyte-client updated from remote npm registry"
+          git diff --quiet && git diff --staged --quiet || git commit -m "fix: dyte-client updated from remote npm registry"
 
       - name: Release
         env:
