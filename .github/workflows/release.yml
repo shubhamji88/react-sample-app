@@ -19,9 +19,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Setup git config
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Update dyte-client version
         run: |
           npm install dyte-client@latest
+          git add package.json package-lock.json
+          git commit -m "fix: dyte-client updated from remote npm registry"
 
       - name: Release
         env:
