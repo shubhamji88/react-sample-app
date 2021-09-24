@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/dyte-in/react-integration-example/compare/v1.0.0...v1.0.1) (2021-09-24)
+
+
+### Bug Fixes
+
+* commit only if there are changes ([c91d598](https://github.com/dyte-in/react-integration-example/commit/c91d598da04ea9f60b64d42bd000dfc25084be0f))
+* create a commit upon auto-updating dyte-client ([953a714](https://github.com/dyte-in/react-integration-example/commit/953a714d6766ebb7056c890d1ced25b3929bcbd4))
+
 # 1.0.0 (2021-09-24)
 
 
