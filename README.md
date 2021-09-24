@@ -4,7 +4,7 @@
     <img src="https://dyte-uploads.s3.ap-south-1.amazonaws.com/dyte-logo-dark.svg" alt="Logo" width="80">
   </a>
 
-  <h3 align="center">Web integration Example</h3>
+  <h3 align="center">Web Integration Example</h3>
 
   <p align="center">
     A simple express app which integrates with dyte using REST APIs.
@@ -42,7 +42,7 @@ A basic reactJS project demonstrating how you can integrate your react applicati
 
 ![very-basic](docs/site.png)
 
-Choose from a list of available meeting rooms or create a new dyte meeting and join it as a participant or a host.
+Choose from a list of available meeting rooms, or create a new Dyte meeting and join as a participant or a host.
 
 <!-- A demo is hosted on https://dyte-web-example.herokuapp.com/ -->
 
@@ -69,18 +69,6 @@ React application structure :
 
 ```
 
-## Application Flow
-
-The application by default will run here `http://localhost:3000`. The express server will be used to serve the build pages and the api request.
-
-On opening `http://localhost:3000` on browser. The client will first make an api call to check list of available meeting rooms. If not, then you can create a meeting room by entering a title and then click on create room button. The newly created room can be seen under the meeting room list section.
-
-You can select the example that you want to test from the select example section. You can also refer the example component code with the path provided.
-
-Finally, you can test the example by joining any meeting room as a host or as a participant. On clicking the button, a new user will be created by making an api call and meeting room will be launched.
-
-All mandatory credentials of a user (i.e roomname , user authtoken etc ) that are required to launch the meetings are stored in session storage.
-
 ## Getting Started
 
 Please make sure you have an organization ID and API Key for your application. These can be obtained from the developer portal.
@@ -103,7 +91,7 @@ npm install
 
 ```sh
 cp .env.example .env
-nano .env
+# make changes in the .env file
 ```
 
 4. Run the application
@@ -111,6 +99,20 @@ nano .env
 ```sh
 npm run start:dev
 ```
+
+
+## Application Flow
+
+The application by default will run here `http://localhost:3000`. The express server will be used to serve the build pages and the api request.
+
+On opening `http://localhost:3000` in your browser, the client will first make an api call to check list of available meeting rooms. If not, then you can create a meeting room by entering a title and then click on create room button. The newly created room can be seen under the meeting room list section.
+
+You can select the example that you want to test from the select example section. You can also refer the example component code with the path provided.
+
+Finally, you can test the example by joining any meeting room as a host or as a participant. On clicking the button, a new user will be created by making an api call and meeting room will be launched.
+
+All mandatory credentials of a user (i.e. roomname, user authtoken etc.) that are required to launch the meetings are stored in session storage.
+
 
 <!-- USAGE EXAMPLES -->
 
@@ -122,7 +124,7 @@ You can also refer the example component code with the path provided.
 
 <!-- You can use this example as a reference on how you can integrate your webapp with dyte. -->
 
-_For documentation on APIs and client SDKs, please refer to our [docs page](https://docs.dyte.in)._
+_For documentation on APIs and client SDKs, please refer to our [official documentation](https://docs.dyte.in)._
 
 <!-- LICENSE -->
 
