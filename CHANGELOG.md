@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/dyte-in/react-integration-example/compare/v1.0.5...v1.0.6) (2021-10-13)
+
+
+### Bug Fixes
+
+* dyte-client updated from remote npm registry ([ce02dbb](https://github.com/dyte-in/react-integration-example/commit/ce02dbb070ec0afa709e0810983514c252eb76fa))
+
 ## [1.0.5](https://github.com/dyte-in/react-integration-example/compare/v1.0.4...v1.0.5) (2021-10-05)
 
 
