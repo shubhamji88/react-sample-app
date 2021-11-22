@@ -25,5 +25,5 @@
     ],
     "@semantic-release/github"
   ],
-  "repositoryUrl": "https://github.com/dyte-in/react-integration-example"
+  "repositoryUrl": "https://github.com/dyte-in/react-sample-app"
 }
