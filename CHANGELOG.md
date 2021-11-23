@@ -1,3 +1,12 @@
+## [1.0.11](https://github.com/dyte-in/react-sample-app/compare/v1.0.10...v1.0.11) (2021-11-23)
+
+
+### Bug Fixes
+
+* dyte-client updated from remote npm registry ([4901d61](https://github.com/dyte-in/react-sample-app/commit/4901d61be49c55cb03bb68d47c1a02f3700b119f))
+* **package.json:** rename package to `react-sample-app` ([bb83810](https://github.com/dyte-in/react-sample-app/commit/bb838102a50a40a5e4ffae189204a609b38681c3))
+* **releases:** repositoryUrl was changed ([4d73c8e](https://github.com/dyte-in/react-sample-app/commit/4d73c8e90f1f8824c49431d348d50c8b3dfd01a7))
+
 ## [1.0.10](https://github.com/dyte-in/react-integration-example/compare/v1.0.9...v1.0.10) (2021-11-08)
 
 
