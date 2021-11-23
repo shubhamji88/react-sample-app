@@ -8,6 +8,8 @@ const folderNameMap: any = {
   "custom-layout-button": "customLayoutButton",
 };
 
+const { REACT_APP_MY_BACKEND: MY_BACKEND } = process.env;
+
 export const MainScreenComponent: React.FC<{}> = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [allMeeetings, setAllMeeting] = useState<any[]>([]);
@@ -20,7 +22,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
   const handleCreateRoomClick = useCallback(
     (title) => {
       axios({
-        url: `/meeting`,
+        url: `${MY_BACKEND}/meeting/create`,
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -46,14 +48,15 @@ export const MainScreenComponent: React.FC<{}> = () => {
     isHost: boolean = false
   ) => {
     const resp = await axios({
-      url: `/participant`,
+      url: `${MY_BACKEND}/participant/create`,
       method: "POST",
       headers: {
         Accept: "application/json",
       },
       data: {
-        isHost: isHost,
+        roleName: isHost ? 'host' : 'participant',
         meetingId: meetingId,
+        clientSpecificId: Math.random().toString(36).substring(7)
       },
     });
 
@@ -72,7 +75,7 @@ export const MainScreenComponent: React.FC<{}> = () => {
   useEffect(() => {
     // api call to get list of available/existing meeting rooms
     axios({
-      url: `/meeting`,
+      url: `${MY_BACKEND}/meetings`,
       method: "GET",
     })
       .then((response) => {

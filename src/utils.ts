@@ -1,28 +1,27 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const joinExistingRoom = async (
-    meetingId: string,
-    roomName: string,
-  ) => {
-    const resp = await axios({
-      url: `/participant`,
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-      },
-      data: {
-        meetingId: meetingId,
-      },
-    });
+const { REACT_APP_MY_BACKEND: MY_BACKEND } = process.env;
 
-    const authResponse = resp.data.data.authResponse;
-    const authToken = authResponse.authToken;
+export const joinExistingRoom = async (meetingId: string, roomName: string) => {
+  const resp = await axios({
+    url: `${MY_BACKEND}/participant/create`,
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+    },
+    data: {
+      meetingId: meetingId,
+    },
+  });
 
-    //saving meeting details in session storage
-    sessionStorage.setItem("auth", authToken);
-    sessionStorage.setItem("meetingID", meetingId);
-    sessionStorage.setItem("roomName", roomName);
+  const authResponse = resp.data.data.authResponse;
+  const authToken = authResponse.authToken;
 
-    //reloading the page
-    window.location.reload()
-  };
+  //saving meeting details in session storage
+  sessionStorage.setItem('auth', authToken);
+  sessionStorage.setItem('meetingID', meetingId);
+  sessionStorage.setItem('roomName', roomName);
+
+  //reloading the page
+  window.location.reload();
+};

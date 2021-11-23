@@ -41,10 +41,10 @@ export const CustomLayoutButton: React.FC<{}> = () => {
 
   return (
     <React.Fragment>
-      {auth && roomName && process.env.REACT_APP_DYTE_ORG_ID && (
+      {auth && roomName && (
         <DyteMeeting
           onInit={onDyteInit}
-          clientId={process.env.REACT_APP_DYTE_ORG_ID}
+          clientId={process.env.REACT_APP_DYTE_ORG_ID!}
           meetingConfig={{
             roomName: roomName,
             authToken: auth,
