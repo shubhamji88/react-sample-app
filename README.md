@@ -1,18 +1,18 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://dyte.in">
+  <a href="https://dyte.io">
     <img src="https://dyte-uploads.s3.ap-south-1.amazonaws.com/dyte-logo-dark.svg" alt="Logo" height="40">
   </a>
 
   <h3 align="center">React Sample App</h3>
 
   <p align="center">
-    A simple express app which integrates with dyte using REST APIs.
+    A basic project demonstrating how you can integrate **dyte** in your React app.
     <br />
     <a href="https://docs.dyte.io"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://dyte-react-demo.herokuapp.com">View Demo</a>
+    <a href="https://dyte-react-sample.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/dyte-in/react-sample-app/issues">Report Bug</a>
     ·
