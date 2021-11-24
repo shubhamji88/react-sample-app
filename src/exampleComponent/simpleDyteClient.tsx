@@ -25,6 +25,7 @@ export const MeetingComponent: React.FC<{}> = () => {
       //creating a new participant
       joinExistingRoom(params.id, params.room)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

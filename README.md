@@ -12,7 +12,7 @@
     <a href="https://docs.dyte.io"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://dyte-react-sample.netlify.app">View Demo</a>
+    <a href="https://dyte-react-sample.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/dyte-in/react-sample-app/issues">Report Bug</a>
     ·

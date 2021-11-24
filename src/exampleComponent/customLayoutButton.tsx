@@ -5,9 +5,9 @@ import { joinExistingRoom } from "../utils";
 
 export const CustomLayoutButton: React.FC<{}> = () => {
   let history = useHistory();
-  let params : {
-    id :  string;
-    room : string
+  let params: {
+    id: string;
+    room: string
   } = useParams()
   let auth = sessionStorage.getItem("auth");
   let roomName = sessionStorage.getItem("roomName");
@@ -33,10 +33,11 @@ export const CustomLayoutButton: React.FC<{}> = () => {
   };
 
   useEffect(() => {
-    if(!auth && !roomName){
+    if (!auth && !roomName) {
       //creating a new participant
       joinExistingRoom(params.id, params.room)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
