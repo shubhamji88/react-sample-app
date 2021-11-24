@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/dyte-in/react-sample-app/compare/v1.0.11...v1.1.0) (2021-11-24)
+
+
+### Bug Fixes
+
+* **docs:** update demo link, refactoring ([aca2db1](https://github.com/dyte-in/react-sample-app/commit/aca2db13c8e9d4e2681cfd64ddf521df8a6a20f4))
+
+
+### Features
+
+* use sample backend ([7b97317](https://github.com/dyte-in/react-sample-app/commit/7b973175fd2523869121e85472b02e693af58f52))
+
 ## [1.0.11](https://github.com/dyte-in/react-sample-app/compare/v1.0.10...v1.0.11) (2021-11-23)
 
 
