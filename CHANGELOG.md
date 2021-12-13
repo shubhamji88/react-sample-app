@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/dyte-in/react-sample-app/compare/v1.1.1...v1.1.2) (2021-12-13)
+
+
+### Bug Fixes
+
+* dyte-client updated from remote npm registry ([1976018](https://github.com/dyte-in/react-sample-app/commit/1976018702a06a574f55853783688d5e6d32a346))
+
 ## [1.1.1](https://github.com/dyte-in/react-sample-app/compare/v1.1.0...v1.1.1) (2021-11-29)
 
 
