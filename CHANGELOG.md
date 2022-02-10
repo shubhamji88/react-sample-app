@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/dyte-in/react-sample-app/compare/v1.1.15...v1.1.16) (2022-02-10)
+
+
+### Bug Fixes
+
+* dyte-client updated from remote npm registry ([a52d991](https://github.com/dyte-in/react-sample-app/commit/a52d991816c1493ef1cad809d734aeb68b93f525))
+
 ## [1.1.15](https://github.com/dyte-in/react-sample-app/compare/v1.1.14...v1.1.15) (2022-02-09)
 
 
