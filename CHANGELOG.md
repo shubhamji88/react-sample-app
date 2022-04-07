@@ -1,3 +1,11 @@
+## [1.1.29](https://github.com/dyte-in/react-sample-app/compare/v1.1.28...v1.1.29) (2022-04-07)
+
+
+### Bug Fixes
+
+* dyte-client updated from remote npm registry ([1b31400](https://github.com/dyte-in/react-sample-app/commit/1b31400170f58db07959267f6598468ea9951982))
+* **addLicnse:** add missing license doc ([43c48b8](https://github.com/dyte-in/react-sample-app/commit/43c48b86a4d16d548bd819652b2074f2dfcd4ebc))
+
 ## [1.1.28](https://github.com/dyte-in/react-sample-app/compare/v1.1.27...v1.1.28) (2022-04-06)
 
 
